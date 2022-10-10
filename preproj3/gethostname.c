@@ -16,11 +16,11 @@ char hostname[ARRAY_SIZE];
 int main(void)
 {
   if (gethostname(hostname, ARRAY_SIZE) == 0) {
-    printf("Hostname: %s", hostname);
+    printf("Hostname: %s\n", hostname);
     exit(EXIT_SUCCESS);
   }
   else {
-    printf("ERROR: gethostname()");
+    printf("ERROR: gethostname()\n");
     exit(EXIT_FAILURE);
   }
 }
