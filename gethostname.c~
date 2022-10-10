@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+#define ARRAY_SIZE 80
+
+char hostname[ARRAY_SIZE];
+
+int main(void)
+{
+  if (gethostname(hostname, ARRAY_SIZE) == 0) {
+    printf("Hostname: %s", hostname);
+    exit(EXIT_SUCCESS);
+  }
+  else {
+    printf("ERROR: gethostname()");
+    exit(EXIT_FAILURE);
+  }
+}
